@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.author = 'Novars Inc.'
   s.platform = :ios
 
-  s.source = { :http => 'https://github.com/techvein/MaBeeeiOSSDK/archive/v1.0.zip', :flatten => true }
+#  s.source = { :http => 'https://github.com/techvein/MaBeeeiOSSDK/archive/v1.0.zip', :flatten => true }
   s.platform = :ios
   s.ios.deployment_target = '5.1'
 
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.preserve_paths = framework_path
   s.header_dir = 'MaBeeeSDK'
 
-  s.frameworks = 'MaBeeeSDK', 'SystemConfiguration'
+  s.vendored_frameworks = 'MaBeeeSDK.framework',
   # s.libraries = 'stdc++'
   # s.frameworks = 'MaBeeeSDK', 'AVFoundation', 'CoreData', 'CoreLocation', 'CoreText', 'GLKit', 'ImageIO', 'OpenGLES', 'QuartzCore', 'SystemConfiguration'
   # s.libraries = 'icucore', 'stdc++', 'z'
