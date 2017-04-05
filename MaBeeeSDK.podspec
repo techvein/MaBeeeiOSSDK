@@ -38,6 +38,5 @@ Pod::Spec.new do |s|
   # s.libraries = 'icucore', 'stdc++', 'z'
 
 
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/MaBeeeSDK"' }
 end
 
