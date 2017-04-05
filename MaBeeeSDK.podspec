@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.author = 'Novars Inc.'
   s.platform = :ios
 
-#  s.source = { :http => 'https://github.com/techvein/MaBeeeiOSSDK/archive/v1.0.zip', :flatten => true }
+  s.source = { :git => 'https://github.com/novars-jp/MaBeeeiOSSDK.git' }
   s.platform = :ios
   s.ios.deployment_target = '5.1'
 
