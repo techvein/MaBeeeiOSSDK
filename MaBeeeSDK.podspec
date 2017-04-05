@@ -32,11 +32,12 @@ Pod::Spec.new do |s|
   s.preserve_paths = framework_path
   s.header_dir = 'MaBeeeSDK'
 
-  s.vendored_frameworks = 'MaBeeeSDK.framework',
+  s.vendored_frameworks = 'MaBeeeSDK.framework'
   # s.libraries = 'stdc++'
   # s.frameworks = 'MaBeeeSDK', 'AVFoundation', 'CoreData', 'CoreLocation', 'CoreText', 'GLKit', 'ImageIO', 'OpenGLES', 'QuartzCore', 'SystemConfiguration'
   # s.libraries = 'icucore', 'stdc++', 'z'
 
 
+  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/MaBeeeSDK"' }
 end
 
