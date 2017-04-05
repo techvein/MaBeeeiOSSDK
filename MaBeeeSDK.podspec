@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'MaBeeeSDK'
-  s.version = '1.0.0'
+  s.version = '1.5.0'
   s.summary = 'MaBeee SDK for iOS.'
   s.description = 'MaBeee SDK for iOS'
   s.homepage = 'http://developer.novars.jp/'
@@ -26,17 +26,12 @@ Pod::Spec.new do |s|
   framework_path = 'MaBeeeSDK.framework'
 
   s.source_files = "#{framework_path}/Headers/*.h"
-#  s.resource = "#{framework_path}/Resources/Mabeee.bundle"
   s.module_map = '#{framework_path}/Modules/module.modulemap'
 
   s.preserve_paths = framework_path
   s.header_dir = 'MaBeeeSDK'
 
   s.vendored_frameworks = 'MaBeeeSDK.framework'
-  # s.libraries = 'stdc++'
-  # s.frameworks = 'MaBeeeSDK', 'AVFoundation', 'CoreData', 'CoreLocation', 'CoreText', 'GLKit', 'ImageIO', 'OpenGLES', 'QuartzCore', 'SystemConfiguration'
-  # s.libraries = 'icucore', 'stdc++', 'z'
-
 
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/MaBeeeSDK"' }
 end
