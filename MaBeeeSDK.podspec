@@ -7,11 +7,34 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "MaBeeeSDK"
-  s.version      = "1.5"
-  s.summary      = "A short description of MaBeeeSDK."
-  s.homepage     = "https://github.com/novars-jp/MaBeeeiOSSDK"
-  s.license      = "MIT (example)"
-  s.author       = { "Yasutaka Kawamoto" => "kawamoto@tech-vein.com" }
-  s.source       = { :git => "https://github.com/techvein/MaBeeeiOSSDK", :tag => "#{s.version}" }
+  s.name = 'MaBeeeSDK'
+  s.version = '1.0.0'
+  s.summary = 'MaBeee SDK for iOS.'
+  s.description = 'MaBeee SDK for iOS'
+  s.homepage = 'http://developer.novars.jp/'
+  s.license = {
+    :type => 'Copyright',
+    :text => 'Copyright 2017 Novars Inc.'
+  }
+  s.author = 'Novars Inc.'
+
+  s.source = { :http => 'https://github.com/techvein/MaBeeeiOSSDK/archive/v1.0.zip', :flatten => true }
+  s.platform = :ios
+  s.ios.deployment_target = '5.1'
+
+  framework_path = 'MaBeeeSDK.framework'
+
+  s.source_files = "#{framework_path}/Headers/*.h"
+#  s.resource = "#{framework_path}/Resources/Mabeee.bundle"
+
+  s.preserve_paths = framework_path
+  s.header_dir = 'MaBeee'
+
+  s.frameworks = 'MaBeeeSDK'
+  s.libraries = 'stdc++'
+  # s.frameworks = 'MaBeeeSDK', 'AVFoundation', 'CoreData', 'CoreLocation', 'CoreText', 'GLKit', 'ImageIO', 'OpenGLES', 'QuartzCore', 'SystemConfiguration'
+  # s.libraries = 'icucore', 'stdc++', 'z'
+
+  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/MaBeeeSDK"' }
 end
+
