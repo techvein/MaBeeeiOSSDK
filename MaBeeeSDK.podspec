@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
     :text => 'Copyright 2017 Novars Inc.'
   }
   s.author = 'Novars Inc.'
+  s.platform = :ios
 
   s.source = { :http => 'https://github.com/techvein/MaBeeeiOSSDK/archive/v1.0.zip', :flatten => true }
   s.platform = :ios
@@ -28,11 +29,11 @@ Pod::Spec.new do |s|
 #  s.resource = "#{framework_path}/Resources/Mabeee.bundle"
 
   s.preserve_paths = framework_path
-  s.header_dir = 'MaBeeeiOSSDK'
+  s.header_dir = 'MaBeeeSDK'
 
-  s.frameworks = 'MaBeeeiOSSDK'
+  s.frameworks = 'MaBeeeSDK'
   s.libraries = 'stdc++'
-  # s.frameworks = 'MaBeeeiOSSDK', 'AVFoundation', 'CoreData', 'CoreLocation', 'CoreText', 'GLKit', 'ImageIO', 'OpenGLES', 'QuartzCore', 'SystemConfiguration'
+  # s.frameworks = 'MaBeeeSDK', 'AVFoundation', 'CoreData', 'CoreLocation', 'CoreText', 'GLKit', 'ImageIO', 'OpenGLES', 'QuartzCore', 'SystemConfiguration'
   # s.libraries = 'icucore', 'stdc++', 'z'
 
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/MaBeeeSDK"' }
